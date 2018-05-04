@@ -20,8 +20,14 @@ class AllCharactersViewController: UIViewController {
         super.viewDidAppear(true)
         
         GOTDataManager.fetchCharacterList { (error, characters) in
-            print ("got all characters")
-            print (characters)
+            if let error = error {
+                /* create a new error based on the message */
+                print ("oops, we found nothing", error.localizedDescription)
+                self.displayMessageToUserUsingAlert(title: "Oops", message: "Could not load data", completion: nil, okButtonText: "Ok", afterHittingAction: nil)
+            } else {
+                print ("got all characters")
+                print (characters)
+            }
         }
     }
 

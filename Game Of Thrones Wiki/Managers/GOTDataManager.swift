@@ -24,9 +24,10 @@ class _GOTDataManager {
         Alamofire.request(url).responseJSON { (response) in
             if let characters = response.result.value as? [[String: Any]] {
                 completion(nil, characters)
+            } else {
+                let newError = NSError(domain: "GOTDataManagerError", code: 404, userInfo: ["message": "Could not find any data"])
+                completion(newError, nil)
             }
         }
-        
-        completion(nil, nil)
     }
 }

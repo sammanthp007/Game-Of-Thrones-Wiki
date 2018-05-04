@@ -14,6 +14,7 @@
 		BB8C3ADB209D178C000BBD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C3AD9209D178C000BBD02 /* LaunchScreen.storyboard */; };
 		BB8C3AE5209D1B0F000BBD02 /* AllCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3AE4209D1B0F000BBD02 /* AllCharactersViewController.swift */; };
 		BBEE73E9209D1C8700D4761A /* GOTDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE73E8209D1C8700D4761A /* GOTDataManager.swift */; };
+		BBEE73EC209D224A00D4761A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE73EB209D224A00D4761A /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BB8C3ADC209D178C000BBD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB8C3AE4209D1B0F000BBD02 /* AllCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharactersViewController.swift; sourceTree = "<group>"; };
 		BBEE73E8209D1C8700D4761A /* GOTDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDataManager.swift; sourceTree = "<group>"; };
+		BBEE73EB209D224A00D4761A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		BB8C3ACF209D178B000BBD02 /* Game Of Thrones Wiki */ = {
 			isa = PBXGroup;
 			children = (
+				BBEE73EA209D222400D4761A /* Extensions */,
 				BBEE73E7209D1C5500D4761A /* Managers */,
 				BB8C3AE3209D1AE9000BBD02 /* Models */,
 				BB8C3AE2209D1AE3000BBD02 /* ViewControllers */,
@@ -104,6 +107,14 @@
 				BBEE73E8209D1C8700D4761A /* GOTDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BBEE73EA209D222400D4761A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBEE73EB209D224A00D4761A /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D7487206FB2052A8B7668D26 /* Pods */ = {
@@ -243,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEE73EC209D224A00D4761A /* UIViewControllerExtensions.swift in Sources */,
 				BBEE73E9209D1C8700D4761A /* GOTDataManager.swift in Sources */,
 				BB8C3AE5209D1B0F000BBD02 /* AllCharactersViewController.swift in Sources */,
 				BB8C3AD1209D178B000BBD02 /* AppDelegate.swift in Sources */,
