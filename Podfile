@@ -6,5 +6,6 @@ target 'Game Of Thrones Wiki' do
   use_frameworks!
 
   # Pods for Game Of Thrones Wiki
+  pod 'Alamofire', '~> 4.7'
 
 end
