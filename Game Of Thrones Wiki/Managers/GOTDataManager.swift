@@ -10,9 +10,7 @@ import Foundation
 import Alamofire
 
 
-let GOTDataManager = _GOTDataManager()
-
-class _GOTDataManager {
+class GOTDataManager: NSObject {
     func fetchCharacterList(completion: @escaping (_ error: Error?, _ characters: [[String: Any]]?) -> Void) -> Void {
         guard let url = URL(string: "https://anapioficeandfire.com/api/characters/") else {
             print ("Could not unwrap url")
