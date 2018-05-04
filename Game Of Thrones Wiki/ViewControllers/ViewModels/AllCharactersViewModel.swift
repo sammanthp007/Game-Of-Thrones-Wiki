@@ -6,7 +6,7 @@
 //  Copyright © 2018 Samman Labs. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class AllCharactersViewModel: NSObject {
     @IBOutlet var gotDataManager: GOTDataManager!
@@ -14,7 +14,7 @@ class AllCharactersViewModel: NSObject {
     // Hold data received from api call
     var allCharacters: [[String: Any]]?
     
-    func getAllCharacters(completion: @escaping (_ error: Error?) -> Void) {
+    func getAllCharacters(completion: @escaping (_ error: Error?) -> Void) -> Void {
         gotDataManager.fetchCharacterList { (error, allCharacters) in
             if let error = error {
                 completion(error)
@@ -26,5 +26,14 @@ class AllCharactersViewModel: NSObject {
                 completion(nil)
             }
         }
+    }
+    
+    /* functions used by TableViewController */
+    func numberOfItemsToDisplay(in section: Int) -> Int {
+        return self.allCharacters?.count ?? 0
+    }
+    
+    func characterNametoDisplay(for indexPath: IndexPath) -> String {
+        return self.allCharacters?[indexPath.row]["name"] as? String ?? "Samman"
     }
 }
