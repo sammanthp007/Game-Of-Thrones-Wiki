@@ -13,6 +13,7 @@
 		BB8C3AD8209D178C000BBD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C3AD7209D178C000BBD02 /* Assets.xcassets */; };
 		BB8C3ADB209D178C000BBD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C3AD9209D178C000BBD02 /* LaunchScreen.storyboard */; };
 		BB8C3AE5209D1B0F000BBD02 /* AllCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3AE4209D1B0F000BBD02 /* AllCharactersViewController.swift */; };
+		BBEE73E9209D1C8700D4761A /* GOTDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE73E8209D1C8700D4761A /* GOTDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BB8C3ADA209D178C000BBD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8C3ADC209D178C000BBD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB8C3AE4209D1B0F000BBD02 /* AllCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharactersViewController.swift; sourceTree = "<group>"; };
+		BBEE73E8209D1C8700D4761A /* GOTDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		BB8C3ACF209D178B000BBD02 /* Game Of Thrones Wiki */ = {
 			isa = PBXGroup;
 			children = (
+				BBEE73E7209D1C5500D4761A /* Managers */,
 				BB8C3AE3209D1AE9000BBD02 /* Models */,
 				BB8C3AE2209D1AE3000BBD02 /* ViewControllers */,
 				BB8C3AD0209D178B000BBD02 /* AppDelegate.swift */,
@@ -93,6 +96,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BBEE73E7209D1C5500D4761A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BBEE73E8209D1C8700D4761A /* GOTDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		D7487206FB2052A8B7668D26 /* Pods */ = {
@@ -232,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEE73E9209D1C8700D4761A /* GOTDataManager.swift in Sources */,
 				BB8C3AE5209D1B0F000BBD02 /* AllCharactersViewController.swift in Sources */,
 				BB8C3AD1209D178B000BBD02 /* AppDelegate.swift in Sources */,
 			);
@@ -381,7 +393,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K86KHC28SR;
 				INFOPLIST_FILE = "Game Of Thrones Wiki/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sammanapps.Game-Of-Thrones-Wiki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -397,7 +412,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K86KHC28SR;
 				INFOPLIST_FILE = "Game Of Thrones Wiki/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sammanapps.Game-Of-Thrones-Wiki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

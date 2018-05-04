@@ -15,6 +15,15 @@ class AllCharactersViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        GOTDataManager.fetchCharacterList { (error, characters) in
+            print ("got all characters")
+            print (characters)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
