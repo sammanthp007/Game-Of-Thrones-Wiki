@@ -10,7 +10,8 @@ import UIKit
 
 class AllCharactersViewController: UIViewController {
     @IBOutlet var allCharacterViewModel: AllCharactersViewModel!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,4 +48,15 @@ class AllCharactersViewController: UIViewController {
     }
     */
 
+}
+
+extension AllCharactersViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.allCharacterViewModel.numberOfItemsToDisplay(in: section)
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "charactersCell", for: indexPath)
+        cell.textLabel?.text = self.allCharacterViewModel.getCharacterNametoDisplay(for: indexPath)
+        return cell
+    }
 }

@@ -33,7 +33,7 @@ class AllCharactersViewModel: NSObject {
         return self.allCharacters?.count ?? 0
     }
     
-    func characterNametoDisplay(for indexPath: IndexPath) -> String {
+    func getCharacterNametoDisplay(for indexPath: IndexPath) -> String {
         return self.allCharacters?[indexPath.row]["name"] as? String ?? "Samman"
     }
 }
