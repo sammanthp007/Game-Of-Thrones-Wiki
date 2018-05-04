@@ -13,4 +13,18 @@ class AllCharactersViewModel: NSObject {
     
     // Hold data received from api call
     var allCharacters: [[String: Any]]?
+    
+    func getAllCharacters(completion: @escaping (_ error: Error?) -> Void) {
+        gotDataManager.fetchCharacterList { (error, allCharacters) in
+            if let error = error {
+                completion(error)
+            }
+            /* since this will affect the UI */
+            DispatchQueue.main.async {
+                /* probably this is where we convert the dictionary to model objects */
+                self.allCharacters = allCharacters
+                completion(nil)
+            }
+        }
+    }
 }
