@@ -16,6 +16,7 @@ class AllCharactersViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.dataSource = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,6 +29,8 @@ class AllCharactersViewController: UIViewController {
                 self.displayMessageToUserUsingAlert(title: "Oops", message: "Could not load data", completion: nil, okButtonText: "Ok", afterHittingAction: nil)
             } else {
                 print ("got all characters")
+                print (self.allCharacterViewModel.numberOfItemsToDisplay(in: 0))
+                self.tableView.reloadData()
             }
         }
     }
@@ -54,6 +57,7 @@ extension AllCharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allCharacterViewModel.numberOfItemsToDisplay(in: section)
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "charactersCell", for: indexPath)
         cell.textLabel?.text = self.allCharacterViewModel.getCharacterNametoDisplay(for: indexPath)
