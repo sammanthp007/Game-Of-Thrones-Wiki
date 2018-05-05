@@ -7,5 +7,6 @@ target 'Game Of Thrones Wiki' do
 
   # Pods for Game Of Thrones Wiki
   pod 'Alamofire', '~> 4.7'
+  pod 'Texture'
 
 end

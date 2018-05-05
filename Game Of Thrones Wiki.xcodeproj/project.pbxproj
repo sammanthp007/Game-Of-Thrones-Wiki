@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7791E8C625D53F361EDDC8B8 /* Pods_Game_Of_Thrones_Wiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508921C0A008280BA141C9A2 /* Pods_Game_Of_Thrones_Wiki.framework */; };
 		BB8C3AD1209D178B000BBD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3AD0209D178B000BBD02 /* AppDelegate.swift */; };
-		BB8C3AD6209D178B000BBD02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C3AD4209D178B000BBD02 /* Main.storyboard */; };
 		BB8C3AD8209D178C000BBD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8C3AD7209D178C000BBD02 /* Assets.xcassets */; };
 		BB8C3ADB209D178C000BBD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8C3AD9209D178C000BBD02 /* LaunchScreen.storyboard */; };
 		BB8C3AE5209D1B0F000BBD02 /* AllCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8C3AE4209D1B0F000BBD02 /* AllCharactersViewController.swift */; };
@@ -35,7 +34,6 @@
 		800278A4EF8E1A64EF9CA715 /* Pods-Game Of Thrones Wiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game Of Thrones Wiki.release.xcconfig"; path = "Pods/Target Support Files/Pods-Game Of Thrones Wiki/Pods-Game Of Thrones Wiki.release.xcconfig"; sourceTree = "<group>"; };
 		BB8C3ACD209D178B000BBD02 /* Game Of Thrones Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Of Thrones Wiki.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8C3AD0209D178B000BBD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB8C3AD5209D178B000BBD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB8C3AD7209D178C000BBD02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8C3ADA209D178C000BBD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8C3ADC209D178C000BBD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				BB8C3AE3209D1AE9000BBD02 /* Models */,
 				BB8C3AE2209D1AE3000BBD02 /* ViewControllers */,
 				BB8C3AD0209D178B000BBD02 /* AppDelegate.swift */,
-				BB8C3AD4209D178B000BBD02 /* Main.storyboard */,
 				BB8C3AD7209D178C000BBD02 /* Assets.xcassets */,
 				BB8C3AD9209D178C000BBD02 /* LaunchScreen.storyboard */,
 				BB8C3ADC209D178C000BBD02 /* Info.plist */,
@@ -255,7 +252,6 @@
 			files = (
 				BB8C3ADB209D178C000BBD02 /* LaunchScreen.storyboard in Resources */,
 				BB8C3AD8209D178C000BBD02 /* Assets.xcassets in Resources */,
-				BB8C3AD6209D178B000BBD02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +273,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Game Of Thrones Wiki/Pods-Game Of Thrones Wiki-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -354,14 +358,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BB8C3AD4209D178B000BBD02 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB8C3AD5209D178B000BBD02 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB8C3AD9209D178C000BBD02 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

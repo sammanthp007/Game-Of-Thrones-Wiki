@@ -8,8 +8,12 @@
 
 import Foundation
 
-class AllCharactersViewModel: NSObject {
+class AllCharactersViewModel {
     @IBOutlet var gotDataManager: GOTDataManagerProtocol!
+    
+    init() {
+        self.gotDataManager = GOTDataManager()
+    }
     
     // Hold data received from api call
     var allCharacters: [[String: Any]]?
