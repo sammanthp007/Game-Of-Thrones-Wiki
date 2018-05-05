@@ -60,7 +60,8 @@ extension AllCharactersViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "charactersCell", for: indexPath)
-        cell.textLabel?.text = self.allCharacterViewModel.getCharacterNametoDisplay(for: indexPath)
+        cell.detailTextLabel?.text = self.allCharacterViewModel.getCharacterNametoDisplay(for: indexPath)
+        cell.textLabel?.text = self.allCharacterViewModel.getCharacterAliastoDisplay(for: indexPath)
         return cell
     }
 }

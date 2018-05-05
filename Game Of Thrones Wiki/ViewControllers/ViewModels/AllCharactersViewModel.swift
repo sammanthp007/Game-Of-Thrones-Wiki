@@ -34,6 +34,16 @@ class AllCharactersViewModel: NSObject {
     }
     
     func getCharacterNametoDisplay(for indexPath: IndexPath) -> String {
-        return self.allCharacters?[indexPath.row]["name"] as? String ?? "Samman"
+        if let realName = self.allCharacters?[indexPath.row]["name"] as? String, !realName.isEmpty {
+            return realName
+        }
+        return "None"
+    }
+    
+    func getCharacterAliastoDisplay(for indexPath: IndexPath) -> String {
+        if let aliases = self.allCharacters?[indexPath.row]["aliases"] as? [String] {
+            return aliases[0]
+        }
+        return "No Alias"
     }
 }
