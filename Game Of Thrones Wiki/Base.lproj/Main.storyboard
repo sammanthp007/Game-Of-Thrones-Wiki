@@ -59,10 +59,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="allCharacterViewModel" destination="PCs-Lc-DQa" id="xU9-NS-B6j"/>
                         <outlet property="tableView" destination="q9g-qf-Vsu" id="NZc-YA-RDd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="PCs-Lc-DQa" customClass="AllCharactersViewModel" customModule="Game_Of_Thrones_Wiki" customModuleProvider="target">
+                    <connections>
+                        <outlet property="gotDataManager" destination="Zh8-K4-HhA" id="mQL-75-rEE"/>
+                    </connections>
+                </customObject>
+                <customObject id="Zh8-K4-HhA" customClass="GOTDataManager" customModule="Game_Of_Thrones_Wiki" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="98.50074962518741"/>
         </scene>
