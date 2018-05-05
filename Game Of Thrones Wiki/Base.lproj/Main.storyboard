@@ -66,7 +66,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="PCs-Lc-DQa" customClass="AllCharactersViewModel" customModule="Game_Of_Thrones_Wiki" customModuleProvider="target">
                     <connections>
-                        <outlet property="gotDataManager" destination="Zh8-K4-HhA" id="mQL-75-rEE"/>
+                        <outlet property="gotDataManager" destination="Zh8-K4-HhA" id="Lje-1V-Psl"/>
                     </connections>
                 </customObject>
                 <customObject id="Zh8-K4-HhA" customClass="GOTDataManager" customModule="Game_Of_Thrones_Wiki" customModuleProvider="target"/>

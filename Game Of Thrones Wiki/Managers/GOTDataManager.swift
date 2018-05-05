@@ -10,8 +10,12 @@ import Foundation
 import Alamofire
 
 
-class GOTDataManager: NSObject {
-    func fetchCharacterList(completion: @escaping (_ error: Error?, _ characters: [[String: Any]]?) -> Void) -> Void {
+@objc protocol GOTDataManagerProtocol {
+    func fetchCharacterList(completion: @escaping (_ error: Error?, _ character: [[String: Any]]?) -> Void)
+}
+
+class GOTDataManager: NSObject, GOTDataManagerProtocol {
+    func fetchCharacterList(completion: @escaping (Error?, [[String : Any]]?) -> Void) {
         guard let url = URL(string: "https://anapioficeandfire.com/api/characters/") else {
             print ("Could not unwrap url")
             let newError = NSError(domain: "GOTDataManagerError", code: 100, userInfo: ["message": " Could not unwrap the url for characters"])
